@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+message NoParams {
+}
+
+message Error {
+    int64 errCode = 1;
+    string errMessage = 2;
+}
+
+service DockService {
+    rpc Name (NoParams) returns (string) {
+    }
+
+    rpc Register (NoParams) returns (Error) {
+    }
+
+    rpc UnRegister (NoParams) returns (Error) {
+    }
+
+    rpc Initialize (NoParams) returns (Error) {
+    }
+
+    rpc Initialized (NoParams) returns (Error) {
+    }
+
+    rpc Terminate (NoParams) returns (Error) {
+    }
+
+    rpc ListDrivers (NoParams) returns (Error) {
+    }
+
+    rpc GetDriver (NoParams) returns (Error) {
+    }
+
+    rpc GetCapabilities (NoParams) returns (Error) {
+    }
+
+}
